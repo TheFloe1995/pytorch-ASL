@@ -1,1 +1,3 @@
-# finger-spelling-recognition
+# Image Based American Sign Language (ASL) Recognition with PyTorch
+
+This code was originally written for a student project at the Technical University Munich. The goal was to train a state of the art (2017) deep CNN to classify RGB images showing finger spelling signs. We achieved an accuracy of 83.6% on a subset of speaker E from the [ASL Finger Spelling Dataset](http://empslocal.ex.ac.uk/people/staff/np331/index.php?section=FingerSpellingDataset) with a DenseNet 50. The model was trained on speaker A to D as well as on images from [RWTH Finger Spelling Database](http://www-i6.informatik.rwth-aachen.de/~dreuw/fingerspelling.php).
