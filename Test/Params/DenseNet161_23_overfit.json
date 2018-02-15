@@ -1,0 +1,66 @@
+{
+    "data_params": {
+        "augmentation_params": {
+            "brightness_rand": 0.5,
+            "contrast_rand": 0.5,
+            "crop_factor": [
+                0.95,
+                1.0
+            ],
+            "distortion_range": [
+                0.95,
+                1.05
+            ],
+            "expand_after_rot": false,
+            "hue_rand": 0.1,
+            "im_size": 224,
+            "rot_angle": 20,
+            "saturation_rand": 0.6
+        },
+        "batch_size": 100,
+        "data_root_dir": "/Datasets/dataset_small",
+        "split_config": {
+            "test_subsets": [
+                "D"
+            ],
+            "train_subsets": [
+                "A",
+                "B",
+                "C"
+            ],
+            "val_subsets": [
+                "E"
+            ]
+        }
+    },
+    "model_params": {
+        "freeze_point": 20,
+        "num_classes": 24
+    },
+    "solver_params": {
+        "layer_names": [
+            "trainyou_wewill",
+            "classifier"
+        ],
+        "log_frequency": 1,
+        "loss_function": "CrossEntropyLoss",
+        "num_epochs": 6,
+        "optimizer": "Adam",
+        "optimizer_args": {
+            "betas": [
+                0.9,
+                0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.01,
+            "weight_decay": 0.01
+        },
+        "scheduler": "ReduceLROnPlateau",
+        "scheduler_args": {
+            "mode" : "min",
+            "factor" : 0.2,
+            "patience" : 5
+        },
+        "requires_metric": true
+    }
+}
